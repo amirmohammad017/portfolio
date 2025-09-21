@@ -63,3 +63,4 @@ document.addEventListener("keydown", (e) => {
     sideMenu.classList.remove("active");
   }
 });
+
