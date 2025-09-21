@@ -32,6 +32,24 @@ closeBtn.addEventListener("click", () => {
   sideMenu.classList.remove("active");
 });
 
+// Menu overlay
+const menuOverlay = document.getElementById("menu-overlay");
+
+menuToggle.addEventListener("click", () => {
+  sideMenu.classList.add("active");
+  menuOverlay.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+  sideMenu.classList.remove("active");
+  menuOverlay.classList.remove("active");
+});
+
+menuOverlay.addEventListener("click", () => {
+  sideMenu.classList.remove("active");
+  menuOverlay.classList.remove("active");
+});
+
 // بستن منو با کلیک روی لینک‌ها
 document.querySelectorAll(".side-menu-list a").forEach((link) => {
   link.addEventListener("click", () => {
