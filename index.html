@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amirmohammad | Web Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- FontAwesome (cdnjs, v7.0.1) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar glass navbar-dark" id="navbar">
+    <h2 class="logo">Amirmohammad</h2>
+
+    <!-- Hamburger (mobile) -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Desktop links -->
+    <ul class="nav-desktop">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+<!-- Mobile Slide Menu -->
+<div class="side-menu" id="side-menu">
+  <button class="close-btn" id="close-btn" aria-label="Close menu">
+    <i class="fas fa-times"></i>
+  </button>
+  <ul class="side-menu-list">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="intro glass fade-in">
+      <h1 class="slide-down">Amirmohammad</h1>
+      <h3 class="slide-up">Web Developer</h3>
+      <p class="fade-in">Crafting elegant, modern and responsive web applications.</p>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="section-content fade-up">
+      <h2>About Me</h2>
+      <p>Hello! I’m <strong>Amirmohammad Ghofrani</strong>, a junior front-end developer passionate about creating clean, modern, and user-friendly web interfaces. My focus is on <b>HTML, CSS/SCSS, JavaScript, and React</b>. I enjoy building portfolio projects to improve my skills and I’m currently seeking opportunities to grow as a professional developer.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="section-content fade-up">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>⚡ HTML5, Semantic Markup</li>
+        <li>🎨 CSS3, SCSS, Responsive Design</li>
+        <li>💻 JavaScript (ES6+)</li>
+        <li>⚛️ React (Hooks, Components)</li>
+        <li>🛠 Git / GitHub</li>
+        <li>📦 Basic knowledge of MySQL & C# (Windows Forms)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="section">
+    <div class="section-content fade-up">
+      <h2>Portfolio</h2>
+      <div class="projects">
+        <div class="card glass zoom-in">
+          <img src="images/todo-app.jpg" alt="Todo App Project" />
+          <h3>Todo App</h3>
+          <p>A simple task management app built with HTML, CSS, and JavaScript.</p>
+          <div class="actions">
+            <a href="#" class="btn demo">Demo</a>
+            <a href="https://github.com/username/todo-app" target="_blank" class="btn code">Code</a>
+          </div>
+        </div>
+        <div class="card glass zoom-in">
+          <img src="images/portfolio-site.jpg" alt="Portfolio Website Project" />
+          <h3>Personal Portfolio</h3>
+          <p>This very website — designed with a dark glassmorphism theme.</p>
+          <div class="actions">
+            <a href="#" class="btn demo">Demo</a>
+            <a href="https://github.com/username/portfolio-site" target="_blank" class="btn code">Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="section-content fade-up">
+      <h2>Contact</h2>
+      <p>If you’d like to collaborate or just say hi, feel free to reach out:</p>
+      <div class="contact-icons">
+        <a href="https://github.com/username" target="_blank" class="icon-btn glass"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/username" target="_blank" class="icon-btn glass"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:youremail@example.com" class="icon-btn glass"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer footer-darker">
+    <p>© 2025 — Designed by Amirmohammad</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
