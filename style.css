@@ -301,11 +301,52 @@ a {
   background: rgba(255, 255, 255, 0.2);
 }
 
+/* Contact form */
+.contact-form {
+  margin-top: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.contact-form .form-group input::placeholder,
+.contact-form .form-group textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form .send-btn {
+  background: #2563eb;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.contact-form .send-btn:hover {
+  filter: brightness(1.15);
+}
+
 /* ===== Footer ===== */
 .footer {
+  width: 100vw;
   text-align: center;
   padding: 25px;
-  margin-top: 40px;
   font-size: 14px;
   color: #94a3b8;
 }
