@@ -23,6 +23,13 @@ The website is fully responsive and contains different sections to showcase info
 
 ---
 
+## 🌐 Live Demo
+👉 [Portfolio Website (GitHub Pages)](https://amirmohammad017.github.io/portfolio/)  
+
+[![Website](https://img.shields.io/badge/Visit-Live%20Demo-blue?style=for-the-badge&logo=google-chrome)](https://amirmohammad017.github.io/portfolio/)
+
+---
+
 ## 📸 Preview
 *(Add a screenshot or GIF of your website here later)*  
 
