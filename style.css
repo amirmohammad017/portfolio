@@ -337,6 +337,23 @@ a {
   cursor: pointer;
   font-weight: 500;
 }
+/* Fix autocomplete styles */
+.contact-form input:-webkit-autofill,
+.contact-form textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.1) inset;
+  -webkit-text-fill-color: #fff !important;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+.contact-form input:-moz-autofill,
+.contact-form textarea:-moz-autofill {
+  box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.1) inset;
+  -moz-text-fill-color: #fff !important;
+  border-radius: 8px;
+}
 
 .contact-form .send-btn:hover {
   filter: brightness(1.15);
