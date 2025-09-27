@@ -1,4 +1,4 @@
-name: Deploy to DirectAdmin via FTP
+name: Deploy via FTP/SFTP file deployer
 
 on:
   push:
@@ -6,20 +6,22 @@ on:
       - main
 
 jobs:
-  ftp-deploy:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
-          protocol: ftp
-          local-dir: ./
-          server-dir: /domains/amirmohammad-dev.ir/public_html/
+          fetch-depth: 0
+
+      - name: Deploy to server
+        uses: milanmk/actions-file-deployer@master
+        with:
+          remote-protocol: "ftp"
+          remote-host: ${{ secrets.FTP_SERVER }}
+          remote-user: ${{ secrets.FTP_USERNAME }}
+          remote-password: ${{ secrets.FTP_PASSWORD }}
+          remote-port: ${{ secrets.FTP_PORT }}
+          remote-path: "/domains/amirmohammad-dev.ir/public_html/"
+          local-path: "./"
+          sync: "delta"
