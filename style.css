@@ -12,6 +12,7 @@ body {
   background: url("images/hero-bg.jpg") center/cover fixed no-repeat;
   color: #f8fafc;
   line-height: 1.6;
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -188,6 +189,7 @@ a {
   z-index: 1;
 }
 .intro {
+  max-width: 92%;
   padding: 40px;
   border-radius: 16px;
   position: relative;
@@ -196,7 +198,7 @@ a {
 
 /* ===== Sections (full-width wrappers) ===== */
 .section {
-  width: 100vw;
+  width: 100%;
   background: rgba(0, 0, 0, 0.6);
   padding: 80px 0;
   display: flex;
@@ -249,6 +251,7 @@ a {
   width: 100%;
   border-radius: 14px;
   margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 .card:hover {
   transform: translateY(-8px) scale(1.02);
@@ -361,7 +364,7 @@ a {
 
 /* ===== Footer ===== */
 .footer {
-  width: 100vw;
+  width: 100%;
   text-align: center;
   padding: 25px;
   font-size: 14px;
