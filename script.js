@@ -50,17 +50,18 @@ menuOverlay.addEventListener("click", () => {
   menuOverlay.classList.remove("active");
 });
 
-// بستن منو با کلیک روی لینک‌ها
+// close Menu by click on a link
 document.querySelectorAll(".side-menu-list a").forEach((link) => {
   link.addEventListener("click", () => {
     sideMenu.classList.remove("active");
+    menuOverlay.classList.remove("active");
   });
 });
 
-// بستن با دکمه Esc
+//  Close Menu by press Esc
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && sideMenu.classList.contains("active")) {
     sideMenu.classList.remove("active");
+    menuOverlay.classList.remove("active");
   }
 });
-
