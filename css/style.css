@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -230,8 +231,17 @@ a {
 /* ===== Portfolio ===== */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* ≤2 per row */
   gap: 25px;
+  /* Button (label) */
+  /* Swap button text */
+  /* Hidden grid for extra projects */
+  /* Reveal on toggle */
+}
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
+  }
 }
 .projects .card {
   padding: 25px;
@@ -269,6 +279,63 @@ a {
 }
 .projects .card .actions .btn:hover {
   filter: brightness(1.15);
+}
+.projects #show-more + .show-more-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  grid-column: 1/-1;
+  justify-self: center;
+  padding: 0.75rem 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #f8fafc;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.projects #show-more + .show-more-btn .less-text {
+  display: none;
+}
+.projects #show-more + .show-more-btn:hover {
+  filter: brightness(1.1);
+}
+.projects #show-more:checked + .show-more-btn .more-text {
+  display: none;
+}
+.projects #show-more:checked + .show-more-btn .less-text {
+  display: inline;
+}
+.projects .more-projects {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: inherit; /* match parent grid (3 or 1) */
+  gap: 25px;
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 0;
+  transform: translateY(-60px);
+  transition: all 0.5s ease;
+  transition: opacity 0.75s ease, transform 0.75s ease, max-height 0.75s ease;
+}
+@media (max-width: 768px) {
+  .projects .more-projects {
+    grid-template-columns: 1fr;
+  }
+}
+.projects #show-more:checked ~ .more-projects {
+  opacity: 1;
+  pointer-events: auto;
+  max-height: 1000px; /* large enough to show all */
+  transform: translateY(0);
+  transition: opacity 0.7s ease, transform 0.75s ease, max-height 1.65s ease;
 }
 
 /* ===== Contact ===== */
