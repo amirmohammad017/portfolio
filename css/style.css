@@ -17,7 +17,7 @@ body {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: url("../images/hero-bg.jpg") center/cover fixed no-repeat;
+  background: url("../images/hero-bg.jpg") top center/cover fixed no-repeat;
   color: #f8fafc;
   line-height: 1.6;
   width: 100%;
@@ -245,6 +245,7 @@ a {
 }
 .projects .card {
   padding: 25px;
+  height: 100%;
   border-radius: 20px;
   text-align: center;
   transition: box-shadow 0.3s;
@@ -258,15 +259,20 @@ a {
   margin-bottom: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
+.projects .card p {
+  min-height: 80px;
+}
 .projects .card .actions {
   margin-top: 15px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   gap: 10px;
 }
 .projects .card .actions .btn {
   padding: 10px 16px;
   border-radius: 8px;
+  font-size: 13px;
   color: #ffffff;
   font-weight: 500;
   transition: 0.3s;
@@ -510,7 +516,7 @@ a {
     padding: 28px;
   }
   .section .section-content {
-    width: 92%;
-    padding: 28px;
+    width: 94%;
+    padding: 16px;
   }
 }/*# sourceMappingURL=style.css.map */

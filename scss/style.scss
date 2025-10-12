@@ -233,6 +233,7 @@
 
   .card {
     padding: 25px;
+    height: 100%;
     border-radius: $radius-card;
     text-align: center;
     transition: box-shadow $transition;
@@ -248,15 +249,21 @@
       box-shadow: $shadow-card;
     }
 
+    p {
+      min-height: 80px;
+    }
     .actions {
       margin-top: 15px;
-      display: flex;
+      // margin-top: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       justify-content: center;
       gap: 10px;
 
       .btn {
         padding: 10px 16px;
         border-radius: 8px;
+        font-size: 13px;
         color: $color-white;
         font-weight: 500;
         transition: $transition;
@@ -520,7 +527,7 @@
     padding: $space-md;
   }
   .section .section-content {
-    width: 92%;
-    padding: $space-md;
+    width: 94%;
+    padding: $space-sm;
   }
 }
