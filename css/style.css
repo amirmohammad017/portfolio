@@ -177,6 +177,8 @@ a {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  height: 100svh;
+  height: 100dvh;
   text-align: center;
   padding-top: 60px;
   position: relative;
