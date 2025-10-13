@@ -31,7 +31,7 @@ body::before {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -60px;
   background: url("../images/hero-bg.jpg") top center/cover no-repeat;
   z-index: -1000;
 }
